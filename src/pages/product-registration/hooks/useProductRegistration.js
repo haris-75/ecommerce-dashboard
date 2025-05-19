@@ -102,7 +102,7 @@ export const useProductRegistration = () => {
 
 				setTimeout(() => {
 					setShowSuccess(false);
-					navigate("/inventory-management");
+					navigate("/inventory");
 				}, 2000);
 			} catch (error) {
 				console.error("Error adding product:", error);
@@ -113,7 +113,7 @@ export const useProductRegistration = () => {
 	};
 
 	const handleCancel = () => {
-		navigate("/inventory-management");
+		navigate("/inventory");
 	};
 
 	return {
