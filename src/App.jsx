@@ -12,10 +12,10 @@ export default function App() {
       <Sidebar />
       <main className="flex-1 p-6 overflow-auto">
         <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/revenue" element={<RevenueAnalysis />} />
           <Route path="/inventory" element={<InventoryManagement />} />
           <Route path="/register" element={<ProductRegistration />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<Navigate to="/revenue" replace />} />
         </Routes>
       </main>
