@@ -19,7 +19,7 @@ function Pagination({
 
   return (
     <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-      <div className="flex-1 flex justify-between sm:hidden">
+      <div className="flex-1 flex justify-between items-center md:hidden">
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
@@ -28,6 +28,10 @@ function Pagination({
         >
           Previous
         </button>
+        <p className="text-sm text-gray-700">
+          Showing <span className="font-medium">{startItem}</span> to <span className="font-medium">{endItem}</span> of{' '}
+          <span className="font-medium">{totalItems}</span> results
+        </p>
         <button
           onClick={nextPage}
           disabled={currentPage === totalPages}
@@ -37,7 +41,7 @@ function Pagination({
           Next
         </button>
       </div>
-      <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+      <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
         <div>
           <p className="text-sm text-gray-700">
             Showing <span className="font-medium">{startItem}</span> to <span className="font-medium">{endItem}</span> of{' '}
