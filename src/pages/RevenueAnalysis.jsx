@@ -4,8 +4,8 @@ import {
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell
 } from 'recharts';
-import { getRevenueData } from '../mockData';
 import { DollarSign, ShoppingBag } from 'lucide-react';
+import { getRevenuePageData } from '../mockData';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'];
 
@@ -21,7 +21,7 @@ function RevenueAnalysis() {
     // Simulate API loading
     setLoading(true);
     setTimeout(() => {
-      const revenueData = getRevenueData();
+      const revenueData = getRevenuePageData();
       setData(revenueData);
       setLoading(false);
     }, 500);

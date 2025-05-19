@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar';
 import RevenueAnalysis from './pages/RevenueAnalysis';
 import InventoryManagement from './pages/InventoryManagement';
 import ProductRegistration from './pages/ProductRegistration';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/dashboard/Dashboard';
 
 export default function App() {
   return (

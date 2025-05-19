@@ -19,20 +19,17 @@ const salesData = calculateSalesData(orders);
 // Create inventory service instance
 const inventoryService = new InventoryService(products);
 
-// Export service functions
-export const mockServices = {
-	// Dashboard service
-	getDashboardData: () => getDashboardData(products, orders, salesData),
+// Dashboard service
+export const getDashboardPageData = () => getDashboardData(products, orders, salesData);
 
-	// Revenue service
-	getRevenueData: () => getRevenueData(orders, salesData),
+// Revenue service
+export const getRevenuePageData = () => getRevenueData(orders, salesData);
 
-	// Inventory services
-	getProducts: () => inventoryService.getProducts(),
-	getProduct: id => inventoryService.getProduct(id),
-	updateProductStock: (id, newStock) => inventoryService.updateProductStock(id, newStock),
-	addProduct: product => inventoryService.addProduct(product),
-};
+// Inventory services
+export const getProducts = () => inventoryService.getProducts();
+export const getProduct = id => inventoryService.getProduct(id);
+export const updateProductStock = (id, newStock) => inventoryService.updateProductStock(id, newStock);
+export const addProduct = product => inventoryService.addProduct(product);
 
 // Export direct data access - useful for testing
 export const mockData = {
@@ -40,5 +37,3 @@ export const mockData = {
 	orders,
 	salesData,
 };
-
-export default mockServices;

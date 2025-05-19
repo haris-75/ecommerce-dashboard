@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { addProduct } from '../services/mockData';
 import { Package, Image, Save, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { addProduct } from '../mockData';
 
 function ProductRegistration() {
   const navigate = useNavigate();
