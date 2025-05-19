@@ -8,6 +8,8 @@ import TotalRevenue from './TotalRevenue';
 import ChartSection from './ChartSection';
 import RecentOrders from './RecentOrders';
 import HocLoader from '../../components/HocLoader';
+import Header from '../../components/Header'
+
 
 
 function Dashboard() {
@@ -27,7 +29,8 @@ function Dashboard() {
   return (
     <HocLoader isLoading={loading || !data}>
       <div className="space-y-6">
-        <h1 className="text-2xl font-bold">Dashboard Overview</h1>
+        <Header title='Dashboard Overview' />
+
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <TotalRevenue totalRevenue={data?.totalRevenue} />
