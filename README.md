@@ -1,12 +1,94 @@
-# React + Vite
+# ECommerce Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple E commerce dashboard built using react, vite and recharts.
 
-Currently, two official plugins are available:
+## 📁 Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+ecommerce-dashboard/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── mockData/
+│ ├── pages/
+│ ├── services/
+│ └── App.jsx
+│ └── constants.js
+│ └── helpers.js
+│ └── index.css
+├── .gitignore
+├── index.html
+├── eslint.config.js
+├── package.json
+├── vite.config.js
+└── yarn.lock
+└── README.md
+```
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v14 or above)
+- Yarn or npm
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/haris-75/ecommerce-dashboard.git
+   cd ecommerce-dashboard
+   ```
+
+2. **Install dependencies**
+
+   Using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+   Or using npm:
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server** Using Yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+   Or using npm:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the application**
+
+   Open your browser and navigate to `http://localhost:3000` to view the dashboard.
+
+## 📦 Available Scripts
+
+- `dev:` Starts the development server.
+
+- `build:` Builds the application for production.
+
+- `preview:` Previews the production build.
+
+## 📚 Learning Resources
+
+[React Documentation](https://react.dev/learn)
+
+[Vite Documentation](https://vite.dev/guide/)
+
+[ESLint Documentation](https://eslint.org/docs/latest/use/getting-started)
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull
+request.
