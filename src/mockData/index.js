@@ -4,7 +4,6 @@ import generateOrders from "./generators/orderGenerator";
 
 // Import calculators
 import calculateSalesData from "./calculators/salesCalculator";
-import statsCalculator from "./calculators/statsCalculator";
 
 // Import services
 import getDashboardData from "./services/dashboardService";

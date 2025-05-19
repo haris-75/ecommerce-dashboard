@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { addProduct } from "../../mockData";
+import { addProduct } from "../../../mockData";
+import { getImageId } from "../../../helpers";
 
 export const useProductRegistration = () => {
 	const navigate = useNavigate();
@@ -12,15 +13,14 @@ export const useProductRegistration = () => {
 		stock: "",
 		threshold: "10",
 		platform: "Amazon",
-		image: "/api/placeholder/300/300",
+		image: 1,
 	});
 
-	const [imagePreview, setImagePreview] = useState("/api/placeholder/300/300");
+	const [imagePreview, setImagePreview] = useState(1);
 	const [errors, setErrors] = useState({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [showSuccess, setShowSuccess] = useState(false);
 
-	// Available categories and platforms
 	const categories = ["Electronics", "Clothing", "Home & Kitchen", "Beauty", "Books"];
 	const platforms = ["Amazon", "Walmart"];
 
@@ -32,7 +32,6 @@ export const useProductRegistration = () => {
 				name === "price" || name === "stock" || name === "threshold" ? (value === "" ? "" : parseFloat(value)) : value,
 		}));
 
-		// Clear error for this field when user makes changes
 		if (errors[name]) {
 			setErrors(prev => ({
 				...prev,
@@ -42,13 +41,12 @@ export const useProductRegistration = () => {
 	};
 
 	const handleImageChange = () => {
-		const randomSize = Math.floor(Math.random() * 100) + 300;
-		const newImageUrl = `/api/placeholder/${randomSize}/${randomSize}`;
+		const imageId = getImageId();
 
-		setImagePreview(newImageUrl);
+		setImagePreview(imageId);
 		setFormData(prev => ({
 			...prev,
-			image: newImageUrl,
+			image: imageId,
 		}));
 	};
 
@@ -87,7 +85,6 @@ export const useProductRegistration = () => {
 
 		setIsSubmitting(true);
 
-		// Convert string values to appropriate types
 		const productData = {
 			...formData,
 			price: parseFloat(formData.price),
@@ -95,17 +92,14 @@ export const useProductRegistration = () => {
 			threshold: parseInt(formData.threshold),
 		};
 
-		// Simulate API delay
 		setTimeout(() => {
 			try {
-				// Add product using the existing service function
 				const newProduct = addProduct(productData);
 				console.log("Product added:", newProduct);
 
 				setIsSubmitting(false);
 				setShowSuccess(true);
 
-				// Reset form after 2 seconds and redirect to inventory page
 				setTimeout(() => {
 					setShowSuccess(false);
 					navigate("/inventory-management");

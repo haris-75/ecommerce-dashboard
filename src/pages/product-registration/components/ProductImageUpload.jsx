@@ -1,4 +1,5 @@
 import { Image } from 'lucide-react';
+import { getImageUrl } from '../../../helpers';
 
 const ProductImageUpload = ({ imagePreview, onImageChange }) => {
   return (
@@ -7,7 +8,7 @@ const ProductImageUpload = ({ imagePreview, onImageChange }) => {
       <div className="mt-1 flex items-center">
         <div className="mr-5">
           <img
-            src={imagePreview}
+            src={getImageUrl(imagePreview)}
             alt="Product preview"
             className="h-24 w-24 object-cover rounded-md"
           />

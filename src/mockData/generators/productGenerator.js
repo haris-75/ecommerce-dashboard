@@ -2,6 +2,8 @@
  * Generates mock product data
  * @returns {Array} Array of product objects
  */
+
+import { getImageId } from "../../helpers";
 export const generateProducts = () => {
 	const categories = ["Electronics", "Clothing", "Home & Kitchen", "Beauty", "Books"];
 	const platforms = ["Amazon", "Walmart"];
@@ -13,6 +15,7 @@ export const generateProducts = () => {
 		const platform = platforms[Math.floor(Math.random() * platforms.length)];
 		const price = parseFloat((Math.random() * 200 + 10).toFixed(2));
 		const stock = Math.floor(Math.random() * 100);
+		const image = getImageId();
 
 		products.push({
 			id: i,
@@ -23,7 +26,7 @@ export const generateProducts = () => {
 			stock,
 			threshold: 10,
 			platform,
-			image: `/api/placeholder/300/300`,
+			image,
 		});
 	}
 

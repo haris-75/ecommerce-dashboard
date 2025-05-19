@@ -2,7 +2,7 @@
 import { Edit } from 'lucide-react';
 import EditableStockCell from './EditableStockCell';
 import Pagination from './Pagination';
-import fallbackImage from '../../../assets/fallback-image.png'
+import { getImageUrl } from '../../../helpers';
 
 function InventoryTable({
   filteredProducts,
@@ -92,9 +92,10 @@ function InventoryTable({
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   <div className="flex items-center">
                     <img
-                      src={fallbackImage}
+                      src={getImageUrl(product.image)}
                       alt={product.name}
                       className="h-10 w-10 rounded-full mr-3"
+                      loading='lazy'
                     />
                     <div>
                       <div className="font-medium">{product.name}</div>
