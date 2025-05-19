@@ -1,10 +1,10 @@
 import './index.css'
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import RevenueAnalysis from './pages/RevenueAnalysis';
-import InventoryManagement from './pages/InventoryManagement';
-import ProductRegistration from './pages/ProductRegistration';
 import Dashboard from './pages/dashboard/Dashboard';
+import RevenueAnalysis from './pages/revenue-analysis/RevenueAnalysis';
+import InventoryManagement from './pages/inventory-management/InventoryManagement';
+import ProductRegistration from './pages/product-registration/ProductRegistration';
 
 export default function App() {
   return (
