@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react';
 
 import { getDashboardPageData } from '../../mockData';
-import LowStockAlert from './LowStockAlert';
-import TotalOrders from './TotalOrders';
-import TotalRevenue from './TotalRevenue';
-import ChartSection from './ChartSection';
-import RecentOrders from './RecentOrders';
+import LowStockAlert from './components/LowStockAlert';
+import TotalOrders from './components/TotalOrders';
+import TotalRevenue from './components/TotalRevenue';
+import ChartSection from './components/ChartSection';
+import RecentOrders from './components/RecentOrders';
 import HocLoader from '../../components/HocLoader';
 import Header from '../../components/Header'
 

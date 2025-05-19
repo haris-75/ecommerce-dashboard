@@ -1,11 +1,9 @@
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
-// import { COLORS } from '../../constants';
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8", "#82ca9d"];
+import { COLORS } from '../../../constants';
 
 function ChartSection({ salesData }) {
-  console.log('salesData', salesData)
   return <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
     <div className="bg-white p-6 rounded-lg shadow">
       <h2 className="text-lg font-semibold mb-4">Revenue by Category</h2>
