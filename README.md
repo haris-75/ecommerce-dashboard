@@ -91,4 +91,4 @@ ecommerce-dashboard/
 ## 🤝 Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull
-requests.
+request.
